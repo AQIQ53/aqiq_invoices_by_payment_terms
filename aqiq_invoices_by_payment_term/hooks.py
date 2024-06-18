@@ -219,3 +219,7 @@ app_license = "mit"
 # auth_hooks = [
 #	"aqiq_invoices_by_payment_term.auth.validate"
 # ]
+fixtures = [
+    "Client Script",
+    "Custom Field",
+]
