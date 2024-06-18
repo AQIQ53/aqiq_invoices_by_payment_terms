@@ -4,9 +4,7 @@ from frappe import _
 @frappe.whitelist(allow_guest=True)
 def create_multiple_sales_invoice(name):
     doc = frappe.get_doc('Sales Order', name)
-    
     for payment in doc.payment_schedule:
-    
         if not frappe.db.exists("Sales Invoice Item", {"docstatus": 1,"custom_payment_schedule_id": payment.name}):
             sales_invoice = frappe.get_doc({
                 'doctype': 'Sales Invoice',
