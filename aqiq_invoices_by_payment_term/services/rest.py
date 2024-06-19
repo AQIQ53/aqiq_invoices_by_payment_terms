@@ -1,6 +1,6 @@
 import frappe
 from frappe import _
-#Aqiq
+#Aqiq soltion
 @frappe.whitelist(allow_guest=True)
 def create_multiple_sales_invoice(name):
     doc = frappe.get_doc('Sales Order', name)
