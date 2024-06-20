@@ -9,7 +9,8 @@ def create_multiple_sales_invoice(name):
             sales_invoice = frappe.get_doc({
                 'doctype': 'Sales Invoice',
                 'customer': doc.customer,
-                'set_posting_time': payment.due_date,
+                'set_posting_time': 1,
+                'posting_date':payment.due_date,
                 'due_date': payment.due_date,
                 'company': doc.company,
                 'cost_center': doc.cost_center,
